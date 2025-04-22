@@ -6,10 +6,12 @@ const authRoutes = require("./routes/auth");
 const accountRoutes = require("./routes/account");
 
 const app = express();
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://nosqlvssql-fe.vercel.app/"],
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 
 app.use("/api/auth", authRoutes);
