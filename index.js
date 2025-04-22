@@ -8,7 +8,11 @@ const accountRoutes = require("./routes/account");
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://nosqlvssql-fe.vercel.app/"],
+    origin: [
+      "http://localhost:5173",
+      "https://nosqlvssql-fe.vercel.app",
+      "https://nosqlvssqlbe.onrender.com",
+    ],
     credentials: true,
   })
 );
